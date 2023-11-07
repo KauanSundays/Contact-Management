@@ -34,7 +34,7 @@
             @endif
         </div>
         <button onclick="window.location.href='/create-contact'" class="btn btn-warning">
-            Cadastrar novos CONTACTS
+            Create New CONTACTS
         </button>
     </div>
 </body>
