@@ -15,25 +15,27 @@
         <p>Contact List is Empty.</p>
         <br>
     @else
-        @foreach($contacts as $contact)
-            <div>
-                <p>
-                    Contact Name: {{ $contact->name }}, 
-                    Email: {{ $contact->email }},
-                    <form action="/delete-contact/{{ $contact->id }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Excluir</button>
-                    </form>,
-                    <form action="/edit-contact/{{ $contact->id }}" method="GET">
-                        <button type="submit" class="btn btn-warning" onclick="mostrarFormEditar()">Editar</button>
-                    </form>
-                </p>   
-            </div>
-        @endforeach
+    @foreach($contacts as $contact)
+        <div>
+            <p>
+                Contact Name: {{ $contact->name }},
+                Email: {{ $contact->email }}
+                <form action="/delete-contact/{{ $contact->id }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">Excluir</button>
+                </form>
+                <form action="/edit-contact/{{ $contact->id }}" method="GET">
+                    <button type="submit" class="btn btn-warning">Editar</button>
+                </form>
+            </p>
+        </div>
+    @endforeach
+
+
     @endif
 
-    <button onclick="window.location.href='/create-contact'" class="btn btn-warning">
+    <button onclick="window.location.href='/create-contact'" class="btn btn-info">
         Create New Contacts
     </button>
 </body>
