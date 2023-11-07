@@ -14,7 +14,7 @@
 </head>
 <body class="d-flex flex-column align-items-center justify-content-center vh-100"
 style="background: chocolate">
-    <h1 class="mb-4">Lista de Jogadores</h1>
+    <h1 class="mb-4">CONTACTS LIST</h1>
     <div class="container center-content mt-4">
         <div id class="container-box text-center">
             @if($contacts->isEmpty())
@@ -23,7 +23,7 @@ style="background: chocolate">
             @else
             @foreach($contacts as $contact)
             <div>
-                <p>Nome: {{ $contact->name }}, Posição: {{ $contact->telefone }}</p> 
+                <p>Nome: {{ $contact->name }}, email: {{ $contact->email }}</p> 
                 <form action="/delete-contact/{{ $contact->id }}" method="POST" style="display: inline-block;">
                     @csrf
                     @method('DELETE')
