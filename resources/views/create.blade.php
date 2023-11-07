@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{asset('index.css')}}">
     <title>Document</title>
 </head>
-<body>
+<body style="background: chocolate">
     <form action="/create" method="POST">
         @csrf
         <label for="name">Name:</label>

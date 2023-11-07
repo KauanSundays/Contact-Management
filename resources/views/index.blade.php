@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="{{asset('index.css')}}">
     <title>CRUD</title>
 </head>
-<body class="d-flex flex-column align-items-center justify-content-center vh-100">
+<body class="d-flex flex-column align-items-center justify-content-center vh-100"
+style="background: chocolate">
     <h1 class="mb-4">Lista de Jogadores</h1>
     <div class="container center-content mt-4">
         <div id class="container-box text-center">
