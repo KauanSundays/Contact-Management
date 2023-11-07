@@ -1,56 +1,10 @@
 <?php
-
-use App\Models\Contact;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactsController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
-
-Route::get('/', function () {
-    $contacts = Contact::all();
-    
-    return view('index', ['contacts' => $contacts]);
-});
-
-Route::get('/create-contact', function () {
-    return view('create');
-});
-
-Route::post('/create', function(Request $informacoes) {
-    Contact::create([
-        'name'=> $informacoes->name,
-        'contact'=>$informacoes->contact,
-        'email'=>$informacoes->email
-    ]);
-    echo "foi";
-});
-
-Route::delete('/delete-contact/{id_contact}', function ($id_contact) {
-    $contact = Contact::findOrFail($id_contact);
-    $contact->delete();
-    return redirect('/')->with('mensagem', 'Contact Delete Sucess!');
-});
-
-Route::get('/edit-contact/{id_contact}', function ($id_contact) {
-    $contact = Contact::findOrFail($id_contact);
-    return view('edit', ['contact' => $contact]);
-});
-
-Route::put('/update/{id_contact}', function (Request $informacoes, $id_contact) {
-    $contact = Contact::findOrFail($id_contact);
-    $contact->name = $informacoes->name_contact;
-    $contact->email = $informacoes->email_contact;
-    $contact->contact = $informacoes->number_contact;
-    $contact->save();
-    return redirect('/')->with('mensagem', 'Contact Update Sucess!');
-});
+Route::get('/', [ContactsController::class, 'index']);
+Route::get('/create-contact', [ContactsController::class, 'create']);
+Route::post('/create', [ContactsController::class, 'store']);
+Route::delete('/delete-contact/{id_contact}', [ContactsController::class, 'destroy']);
+Route::get('/edit-contact/{id_contact}', [ContactsController::class, 'edit']);
+Route::put('/update/{id_contact}', [ContactsController::class, 'update']);
