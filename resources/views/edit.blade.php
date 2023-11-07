@@ -13,7 +13,7 @@
     <h1 class="mb-4">Edit Contact: {{$contact->name}}</h1>
 
     <div id class="container-box text-center">
-        <form action="/atualizar/{{ $contact->id }}" method="POST">
+        <form action="/update/{{ $contact->id }}" method="POST">
             @csrf
             @method("PUT")
             <div class="text-left">
