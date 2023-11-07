@@ -7,16 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/create" method="POST">
-        @csrf
+    <form action="">
         <label for="">Name:</label>
-        <input type="text" name="name">
+        <input type="text">
     
         <label for="">Contact: </label>
-        <input type="text" name="contact">
+        <input type="text">
         
         <label for="">Email Address:</label>
-        <input type="text" name="email">
+        <input type="text">
     
         <button>Send</button>
     </form>

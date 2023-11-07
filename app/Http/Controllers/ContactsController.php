@@ -12,6 +12,6 @@ class ContactsController extends Controller
         $contacts = Contact::all();
         dd($contacts);
 
-        return view('welcome', ['name'=>$name]);
+        return view('welcome');
     }
 }

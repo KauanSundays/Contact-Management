@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Contact;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/create', function(Request $informacoes) {
+    Contact::create([
+        'name'=> $informacoes->name,
+        'contact'=>$informacoes->contact,
+        'email'=>$informacoes->email
+    ]);
+    echo "foi";
+});
+
