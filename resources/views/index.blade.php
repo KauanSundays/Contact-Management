@@ -13,12 +13,12 @@
         <p>Contact List is Empty.</p>
         <br>
         <button onclick="window.location.href='/'" class="btn btn-warning">
-            Cadastrar novos contatos
+            Create New Contacts
         </button>
     @else
         @foreach($contacts as $contact)
             <div>
-                <p>Nome: {{ $contact->name }}, Posição: {{ $contact->email }}</p>
+                <p>Contact Name: {{ $contact->name }}, Posição: {{ $contact->email }}</p>
                 <form action="/excluir-contact/{{ $contact->id }}" method="POST" style="display: inline-block;">
                     @csrf
                     @method('DELETE')
@@ -30,5 +30,9 @@
             </div>
         @endforeach
     @endif
+
+    <button>
+        <a href="/create">Create new contact</a>
+    </button>
 </body>
 </html>
