@@ -25,12 +25,10 @@
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger">Excluir</button>
                 </form>
-            </p>
-            <div class="buttons"></div>
                 <form action="/edit-contact/{{ $contact->id }}" method="GET">
                     <button type="submit" class="btn btn-warning">Editar</button>
                 </form>
-            </div>
+            </p>
         </div>
     @endforeach
 
