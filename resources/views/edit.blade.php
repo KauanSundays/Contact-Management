@@ -33,7 +33,7 @@
             </div>
             <br>
             <div class="text-left">
-                <button class="btn btn-success">Enviar Cadastro</button>
+                <button class="btn btn-success">UPDATE DATA</button>
                 <a href="/" class="btn btn-primary">Return Contacts List</a>
             </div>
         </form>
