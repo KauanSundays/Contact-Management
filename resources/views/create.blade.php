@@ -14,13 +14,13 @@
             @csrf
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" placeholder="enter the name" class="form-control" name="name" id="name">
+                <input type="text" placeholder="Enter the name" class="form-control" name="name" id="name">
             </div>
 
             <div class="form-group">
                 <label for="contact">Contact:</label>
-                <input type="text" placeholder="Enter the number" class="form-control" name="contact" id="contact">
-            </div>
+                <input type="text" placeholder="9-9999-9999" class="form-control" name="contact" id="contact" maxlength="9">
+            </div>            
 
             <div class="form-group">
                 <label for="email">Email Address:</label>
