@@ -17,10 +17,8 @@
     @else
     @foreach($contacts as $contact)
             <li>
-                <p>
-                    Contact Name: {{ $contact->name }},
-                    Email: {{ $contact->email }}
-                </p>
+                Contact Name: {{ $contact->name }},
+                Email: {{ $contact->email }},
                 <form action="/delete-contact/{{ $contact->id }}" method="POST">
                     @csrf
                     @method('DELETE')
