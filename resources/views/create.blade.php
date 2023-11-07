@@ -20,7 +20,7 @@
 
             <div class="form-group">
                 <label for="contact">Contact:</label>
-                <input type="text" placeholder="9-9999-9999" class="form-control" name="contact" id="contact">
+                <input type="text" placeholder="9-9999-9999" class="form-control" name="contact" id="contact" maxlength="9">
             </div>
 
             <div class="form-group">
