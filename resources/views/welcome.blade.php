@@ -9,16 +9,16 @@
 <body>
     <form action="/create" method="POST">
         @csrf
-        <label for="">Name:</label>
-        <input type="text" name="name">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
     
-        <label for="">Contact: </label>
-        <input type="text" name="contact">
+        <label for="contact">Contact: </label>
+        <input type="text" name="contact" id="contact">
         
-        <label for="">Email Address:</label>
-        <input type="text" name="email">
+        <label for="email">Email Address:</label>
+        <input type="text" name="email" id="email">
     
-        <button>Send</button>
-    </form>
+        <button type="submit">Send</button>
+    </form>    
 </body>
 </html>
