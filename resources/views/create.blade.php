@@ -30,5 +30,9 @@
             <button type="submit" class="btn btn-success">Send</button>
         </form>    
     </div>
+
+    <button onclick="window.location.href='/'" class="btn btn-warning">
+        Read ALL Contacts
+    </button>
 </body>
 </html>
