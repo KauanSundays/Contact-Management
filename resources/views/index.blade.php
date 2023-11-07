@@ -21,12 +21,12 @@
                 <p>
                     Contact Name: {{ $contact->name }}, 
                     Posição: {{ $contact->email }},
-                    <form action="/excluir-contact/{{ $contact->id }}" method="POST" style="display: inline-block;">
+                    <form action="/excluir-contact/{{ $contact->id }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Excluir</button>
                     </form>,
-                    <form action="/editar-contacts/{{ $contact->id }}" method="GET" style="display: inline-block;">
+                    <form action="/editar-contacts/{{ $contact->id }}" method="GET">
                         <button type="submit" class="btn btn-warning" onclick="mostrarFormEditar()">Editar</button>
                     </form>
                 </p>
