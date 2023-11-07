@@ -11,7 +11,7 @@ class ContactsController extends Controller
     {
         $contacts = Contact::all();
 
-        return view('welcome', ['contacts' => $contacts]);
+        return view('index', ['contacts' => $contacts]);
     }
 
     public function create()
