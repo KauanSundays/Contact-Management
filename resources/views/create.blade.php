@@ -14,13 +14,13 @@
             @csrf
             <label for="name">Name:</label>
             <input type="text" name="name" id="name">
-    
+            <br>
             <label for="contact">Contact:</label>
             <input type="text" name="contact" id="contact">
-        
+            <br>
             <label for="email">Email Address:</label>
             <input type="text" name="email" id="email">
-    
+            <br>
             <button type="submit" class="btn btn-success">Send</button>
         </form>    
     </div>
