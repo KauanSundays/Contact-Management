@@ -26,7 +26,11 @@
             <div class="form-group">
                 <label for="email">Email Address:</label>
                 <input type="text" placeholder="Enter the Email Address" class="form-control" name="email" id="email">
+                @error('email')
+                    <span style="color: red;">{{ $message }}</span>
+                @enderror
             </div>
+            
 
             <button type="submit" class="btn btn-success">Send</button>
         </form>

@@ -29,7 +29,7 @@ class ContactsController extends Controller
             ],
             'email' => [
                 'required',
-                'email',
+                'email', // Verifica se o campo é um e-mail válido
                 Rule::unique('contacts', 'email'),
             ],
         ]);
@@ -42,6 +42,7 @@ class ContactsController extends Controller
 
         return redirect('/')->with('mensagem', 'Create Contact!');
     }
+
 
     public function destroy($id_contact)
     {
