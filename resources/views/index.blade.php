@@ -1,4 +1,4 @@
-<!-- mostrar.blade.php -->
+<!-- index.blade.php -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -12,37 +12,37 @@
     <link rel="stylesheet" href="{{asset('index.css')}}">
     <title>CRUD</title>
 </head>
-<body class="d-flex flex-column align-items-center justify-content-center vh-100"
-style="background: chocolate">
-    <h1 class="mb-4">CONTACTS LIST</h1>
+<body class="d-flex flex-column align-items-center justify-content-center vh-100">
+    <h1 class="mb-4">Lista de CONTACTS</h1>
     <div class="container center-content mt-4">
         <div id class="container-box text-center">
             @if($contacts->isEmpty())
-                <p>Contact List is Empty.</p>
+                <p>Nenhum CONTACTSncontrado.</p>
                 <br>
+                <button onclick="window.location.href='/'" class="btn btn-warning">
+                    Cadastrar novos CONTACTS
+                </button>
             @else
             @foreach($contacts as $contact)
-            <div>
-                <p>Nome: {{ $contact->name }}, email: {{ $contact->email }}</p> 
-                <form action="/delete-contact/{{ $contact->id }}" method="POST" style="display: inline-block;">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Excluir</button>
-                </form>
-                
-                <form action="/edit-contact/{{ $contact->id }}" method="GET" style="display: inline-block;">
-                    <button type="submit" class="btn btn-warning" onclick="mostrarFormEditar()">Editar</button>
+                <div>
+                    <p>Nome: {{ $contact->name }}, Email: {{ $contact->email }}</p> 
+                    <form action="/delete-contact/{{ $contact->id }}" method="POST" style="display: inline-block;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Excluir</button>
+                    </form>
+                    
+                    <form action="/edit-contacts/{{ $contact->id }}" method="GET" style="display: inline-block;">
+                        <button type="submit" class="btn btn-warning" onclick="mostrarFormEditar()">Editar</button>
 
-                </form>
-            </div>
+                    </form>
+                </div>
             @endforeach
-
-            <button onclick="window.location.href='/create-contact'" class="btn btn-info">
-                Create New Contacts
+            <button onclick="window.location.href='/'" class="btn btn-warning">
+            Cadastrar novos CONTACTS
             </button>
-            @endif
+    @endif
     
 
 </body>
 </html>
-        
