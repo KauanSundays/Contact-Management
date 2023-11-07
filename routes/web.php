@@ -34,3 +34,10 @@ Route::post('/create', function(Request $informacoes) {
     ]);
     echo "foi";
 });
+
+Route::delete('/delete-contact/{id_contact}', function ($id_contact) {
+    $contact = Contact::findOrFail($id_contact);
+    $contact->delete();
+    return redirect('/')->with('mensagem', 'Contact Delete Sucess!');
+});
+
