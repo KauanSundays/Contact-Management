@@ -48,7 +48,7 @@ Route::get('/edit-contact/{id_contact}', function ($id_contact) {
 
 Route::put('/update/{id_contact}', function (Request $informacoes, $id_contact) {
     $contact = Contact::findOrFail($id_contact);
-    $contact->name = $informacoes->nome_contact;
+    $contact->name = $informacoes->name_contact;
     $contact->email = $informacoes->email_contact;
     $contact->number = $informacoes->number_contact;
     $contact->save();
