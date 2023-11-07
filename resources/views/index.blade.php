@@ -39,7 +39,7 @@ style="background-color: chocolate">
                     </form>
                 </div>
             @endforeach
-            <button onclick="window.location.href='/'" class="btn btn-warning">
+            <button onclick="window.location.href='/create'" class="btn btn-warning">
             Cadastrar novos CONTACTS
             </button>
     @endif
