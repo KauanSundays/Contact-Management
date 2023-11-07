@@ -3,9 +3,6 @@
     padding: 20px;
 }
 
-body {
-    background-color: chocolate;
-}
 
 h1 {
     background-color: green;
@@ -33,3 +30,6 @@ p {
     display: inline-block;
 }
 
+body {
+    background-color: chocolate;
+}
