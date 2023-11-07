@@ -4,10 +4,7 @@
 }
 
 body {
-    background-image: url(futebola5.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
+    background-color: chocolate;
 }
 
 h1 {
