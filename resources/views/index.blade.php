@@ -23,11 +23,11 @@
                         <form action="/delete-contact/{{ $contact->id }}" method="POST" style="display: inline-block;">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Excluir</button>
+                            <button type="submit" class="btn btn-danger">DELETE</button>
                         </form>
                     
                         <form action="/edit-contact/{{ $contact->id }}" method="GET" style="display: inline-block;">
-                            <button type="submit" class="btn btn-warning" onclick="mostrarFormEditar()">Editar</button>
+                            <button type="submit" class="btn btn-warning" onclick="mostrarFormEditar()">UPDATE</button>
                         </form>
                     </div>
                 @endforeach
