@@ -23,7 +23,7 @@
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Excluir</button>
                     </form>,
-                    <form action="/edit-contacts/{{ $contact->id }}" method="GET">
+                    <form action="/edit-contact/{{ $contact->id }}" method="GET">
                         <button type="submit" class="btn btn-warning" onclick="mostrarFormEditar()">Editar</button>
                     </form>
                 </p>   
