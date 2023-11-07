@@ -32,7 +32,7 @@
     @endif
 
     <button>
-        <a href="/create">Create new contact</a>
+        <a href="/create-contact">Create new contact</a>
     </button>
 </body>
 </html>
