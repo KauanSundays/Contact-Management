@@ -18,13 +18,13 @@
     @foreach($contacts as $contact)
     <div>
         <p>Nome: {{ $contact->name }}, Posição: {{ $contact->telefone }}</p> 
-        <form action="/excluir-contact/{{ $contact->id }}" method="POST" style="display: inline-block;">
+        <form action="/delete-contact/{{ $contact->id }}" method="POST" style="display: inline-block;">
             @csrf
             @method('DELETE')
             <button type="submit" class="btn btn-danger">Excluir</button>
         </form>
         
-        <form action="/editar-contacts/{{ $contact->id }}" method="GET" style="display: inline-block;">
+        <form action="/edit-contact/{{ $contact->id }}" method="GET" style="display: inline-block;">
             <button type="submit" class="btn btn-warning" onclick="mostrarFormEditar()">Editar</button>
 
         </form>
