@@ -1,57 +1,66 @@
+
+
+/* Estilos para títulos */
 h1 {
     background-color: green;
     color: white;
     border-radius: 10px;
     padding: 5px;
-    text-align: center;
+    text-align: center; /* Centraliza o título na tela */
 }
 
+/* Estilização de rótulos */
 label {
     background-color: green;
     color: white;
     border-radius: 10px;
     padding: 5px;
-    display: block;
-    margin: 10px 0;
-    text-align: center;
+    display: block; /* Coloca cada rótulo em uma nova linha */
+    margin: 10px 0; /* Adiciona espaçamento entre os rótulos */
+    text-align: center; /* Centraliza os rótulos na tela */
 }
 
+
+/* Estilização de parágrafos */
 p {
     background-color: green;
     color: white;
     border-radius: 10px;
     padding: 8px 5px;
     display: inline-block;
-    text-align: center;
-    margin: 10px 0;
+    text-align: center; /* Centraliza o texto na tela */
+    margin: 10px 0; /* Adiciona espaçamento entre os parágrafos */
 }
 
+/* Estilização da classe que envolve o conteúdo principal */
 .container-box {
     border: 1px solid #ccc;
     padding: 20px;
-    text-align: center;
-    max-width: 400px;
-    margin: 0 auto;
+    text-align: center; /* Centraliza o conteúdo dentro da caixa */
+    max-width: 400px; /* Define uma largura máxima para o formulário */
+    margin: 0 auto; /* Centraliza a caixa horizontalmente na tela */
 }
 
+/* Estilos para campos de entrada de texto */
 .form-group {
-    text-align: left;
-    margin: 10px 0;
+    text-align: left; /* Alinha o texto à esquerda */
+    margin: 10px 0; /* Adiciona espaçamento entre os campos */
 }
 
 input[type="text"] {
-    width: 100%;
+    width: 100%; /* Preenche a largura da caixa pai */
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
+/* Estilização do corpo (body) */
 body {
     background-color: chocolate;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+    align-items: center; /* Centraliza o conteúdo verticalmente na tela */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente na tela */
+    height: 100vh; /* Define a altura da tela inteira (viewport height) */
+    margin: 0; /* Remove a margem padrão do corpo da página */
 }
