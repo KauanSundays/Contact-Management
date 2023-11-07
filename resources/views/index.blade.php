@@ -17,7 +17,7 @@
             <div>
                 <p>
                     Contact Name: {{ $contact->name }}, 
-                    Posição: {{ $contact->email }},
+                    Email: {{ $contact->email }},
                     <form action="/delete-contact/{{ $contact->id }}" method="POST">
                         @csrf
                         @method('DELETE')
