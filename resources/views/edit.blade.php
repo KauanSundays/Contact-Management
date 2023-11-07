@@ -24,7 +24,7 @@
             <br>
             <div class="text-left">
                 <label for="">Number:</label>
-                <input type="text" placeholder="number_contact" name="number_contact" value="{{$contact->number}}">
+                <input type="text" placeholder="number_contact" name="number_contact" value="{{$contact->contact}}">
             </div>
             <br>
             <div class="text-left">
