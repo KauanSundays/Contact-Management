@@ -10,7 +10,7 @@
     <title>CRUD</title>
 </head>
 <body class="d-flex flex-column align-items-center justify-content-center vh-100">
-    <h1 class="mb-4">Lista de Jogadores</h1>
+    <h1 class="mb-4">Lista de Contatos</h1>
 
     
     <div id class="container-box text-center">
