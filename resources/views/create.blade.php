@@ -38,17 +38,20 @@
 
     <script>
         function validateForm() {
-            var nameInput = document.getElementById("name");
-            var nameError = document.getElementById("name-error");
+        var nameInput = document.getElementById("name");
+        var nameError = document.getElementById("name-error");
 
-            if (nameInput.value.length < 5) {
-                nameError.innerHTML = "O nome deve ter no mínimo 5 caracteres.";
-                return false; // Impede o envio do formulário
-            } else {
-                nameError.innerHTML = ""; // Limpa a mensagem de erro
-                return true; // Permite o envio do formulário
-            }
+        if (nameInput.value.length < 5) {
+            nameError.innerHTML = "O nome deve ter no mínimo 5 caracteres.";
+            nameError.style.backgroundColor = "red";
+            nameError.style.color = "white";
+            return false; // Impede o envio do formulário
+        } else {
+            nameError.innerHTML = ""; // Limpa a mensagem de erro
+            return true; // Permite o envio do formulário
         }
+    }
+
     </script>
 </body>
 </html>
