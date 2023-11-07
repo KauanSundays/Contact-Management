@@ -16,10 +16,12 @@
         <br>
     @else
     @foreach($contacts as $contact)
-        <div>
+        <div class="contact-info">
             <p>
                 Contact Name: {{ $contact->name }},
                 Email: {{ $contact->email }}
+            </p>
+            <div class="buttons">
                 <form action="/delete-contact/{{ $contact->id }}" method="POST">
                     @csrf
                     @method('DELETE')
@@ -28,11 +30,10 @@
                 <form action="/edit-contact/{{ $contact->id }}" method="GET">
                     <button type="submit" class="btn btn-warning">Editar</button>
                 </form>
-            </p>
+            </div>
         </div>
     @endforeach
-
-
+    
     @endif
 
     <button onclick="window.location.href='/create-contact'" class="btn btn-info">

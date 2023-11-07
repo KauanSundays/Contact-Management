@@ -4,10 +4,7 @@
 }
 
 body {
-    background-image: blue;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
+    background-color: blue;
 }
 
 h1 {
@@ -36,7 +33,7 @@ p {
     display: flex;
     align-items: center;
 }
-    
+
 form {
-    margin-left: 10px; 
+    margin-left: 10px;
 }
