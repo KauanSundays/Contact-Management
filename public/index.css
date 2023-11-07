@@ -4,7 +4,10 @@
 }
 
 body {
-    background-color: blue;
+    background-image: url(futebola5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
 }
 
 h1 {
@@ -30,17 +33,6 @@ p {
     color: white;
     border-radius: 10px;
     padding: 8px 5px;
-    display: flex;
-    align-items: center;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.form-inline {
-    margin: 0;
+    display: inline-block;
 }
 

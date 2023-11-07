@@ -16,22 +16,20 @@
         <br>
     @else
     @foreach($contacts as $contact)
-    <li>
-        <div class="contact-item">
-            <span>Contact Name: {{ $contact->name }}, Email: {{ $contact->email }},</span>
-            <form action="/delete-contact/{{ $contact->id }}" method="POST" class="form-inline">
-                @csrf
-                @method('DELETE')
-                <button type="submit" class="btn btn-danger">Excluir</button>
-            </form>
-            <form action="/edit-contact/{{ $contact->id }}" method="GET" class="form-inline">
-                <button type="submit" class="btn btn-warning">Editar</button>
-            </form>
-        </div>
-    </li> 
+    <div>
+        <p>Nome: {{ $contact->name }}, Posição: {{ $contact->telefone }}</p> 
+        <form action="/excluir-contact/{{ $contact->id }}" method="POST" style="display: inline-block;">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger">Excluir</button>
+        </form>
+        
+        <form action="/editar-contacts/{{ $contact->id }}" method="GET" style="display: inline-block;">
+            <button type="submit" class="btn btn-warning" onclick="mostrarFormEditar()">Editar</button>
+
+        </form>
+    </div>
     @endforeach
-
-
 
 
     @endif
