@@ -29,19 +29,33 @@ class ContactsController extends Controller
             ],
             'email' => [
                 'required',
-                'email', // Verifica se o campo é um e-mail válido
+                'email',
                 Rule::unique('contacts', 'email'),
             ],
         ]);
-
-        Contact::create([
-            'name' => $request->name,
-            'contact' => $request->contact,
-            'email' => $request->email,
-        ]);
-
-        return redirect('/')->with('mensagem', 'Create Contact!');
+    
+        try {
+            Contact::create([
+                'name' => $request->name,
+                'contact' => $request->contact,
+                'email' => $request->email,
+            ]);
+    
+            return redirect('/')->with('mensagem', 'Create Contact!');
+        } catch (\Illuminate\Database\QueryException $e) {
+            // O número de contato já está cadastrado
+            if ($e->errorInfo[1] == 1062) {
+                return back()
+                    ->withInput()
+                    ->withErrors(['contact' => 'O número de contato já está cadastrado.']);
+            }
+    
+            return back()
+                ->withInput()
+                ->withErrors(['error' => 'Ocorreu um erro durante a criação do contato.']);
+        }
     }
+    
 
 
     public function destroy($id_contact)
