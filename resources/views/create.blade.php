@@ -12,15 +12,21 @@
     <div class="container-box text-center">
         <form action="/create" method="POST">
             @csrf
-            <label for="name">Name:</label>
-            <input type="text" name="name" id="name">
-            <br>
-            <label for="contact">Contact:</label>
-            <input type="text" name="contact" id="contact">
-            <br>
-            <label for="email">Email Address:</label>
-            <input type="text" name="email" id="email">
-            <br>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" name="name" id="name">
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Contact:</label>
+                <input type="text" class="form-control" name="contact" id="contact">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="text" class="form-control" name="email" id="email">
+            </div>
+
             <button type="submit" class="btn btn-success">Send</button>
         </form>    
     </div>
