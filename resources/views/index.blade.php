@@ -19,21 +19,21 @@
         <div class="contact-info">
             <p>
                 Contact Name: {{ $contact->name }},
-                Email: {{ $contact->email }}
-            </p>
-            <div class="buttons">
+                Email: {{ $contact->email }},
                 <form action="/delete-contact/{{ $contact->id }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger">Excluir</button>
                 </form>
+            </p>
+            <div class="buttons"></div>
                 <form action="/edit-contact/{{ $contact->id }}" method="GET">
                     <button type="submit" class="btn btn-warning">Editar</button>
                 </form>
             </div>
         </div>
     @endforeach
-    
+
     @endif
 
     <button onclick="window.location.href='/create-contact'" class="btn btn-info">
