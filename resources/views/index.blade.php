@@ -18,15 +18,20 @@
     @else
         @foreach($contacts as $contact)
             <div>
-                <p>Contact Name: {{ $contact->name }}, Posição: {{ $contact->email }}</p>
-                <form action="/excluir-contact/{{ $contact->id }}" method="POST" style="display: inline-block;">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Excluir</button>
-                </form>
-                <form action="/editar-contacts/{{ $contact->id }}" method="GET" style="display: inline-block;">
-                    <button type="submit" class="btn btn-warning" onclick="mostrarFormEditar()">Editar</button>
-                </form>
+                <p>
+                    Contact Name: {{ $contact->name }}, 
+                    Posição: {{ $contact->email }},
+                    <form action="/excluir-contact/{{ $contact->id }}" method="POST" style="display: inline-block;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Excluir</button>
+                    </form>,
+                    <form action="/editar-contacts/{{ $contact->id }}" method="GET" style="display: inline-block;">
+                        <button type="submit" class="btn btn-warning" onclick="mostrarFormEditar()">Editar</button>
+                    </form>
+                </p>
+                
+                
             </div>
         @endforeach
     @endif
