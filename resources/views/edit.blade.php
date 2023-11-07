@@ -27,6 +27,11 @@
             </div>            
             <br>
             <div class="text-left">
+                <label for="email_contact">Contact:</label>
+                <input type="text" placeholder="Contact_Number" name="contact" value="{{ $contact->email }}">
+            </div>
+            <br>
+            <div class="text-left">
                 <button class="btn btn-success">Enviar Cadastro</button>
             </div>
         </form>
