@@ -1,4 +1,9 @@
-
+/* Estilização da classe que envolve o conteúdo principal */
+.container-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center; /* Centraliza o conteúdo dentro da caixa */
+}
 
 /* Estilos para títulos */
 h1 {
@@ -20,7 +25,14 @@ label {
     text-align: center; /* Centraliza os rótulos na tela */
 }
 
-
+/* Estilos para campos de entrada de texto */
+input[type="text"] {
+    width: 100%; /* Preenche a largura da caixa pai */
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
 /* Estilização de parágrafos */
 p {
@@ -31,28 +43,6 @@ p {
     display: inline-block;
     text-align: center; /* Centraliza o texto na tela */
     margin: 10px 0; /* Adiciona espaçamento entre os parágrafos */
-}
-
-/* Estilização da classe que envolve o conteúdo principal */
-.container-box {
-    border: 1px solid #ccc;
-    padding: 20px;
-    text-align: center; /* Centraliza o conteúdo dentro da caixa */
-    max-width: 400px; /* Define uma largura máxima para o formulário */
-    margin: 0 auto; /* Centraliza a caixa horizontalmente na tela */
-}
-
-/* Estilos para campos de entrada de texto */
-.form-group {
-    text-align: left; /* Alinha o texto à esquerda */
-    margin: 10px 0; /* Adiciona espaçamento entre os campos */
-}
-
-input[type="text"] {
-    width: 100%; /* Preenche a largura da caixa pai */
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
 /* Estilização do corpo (body) */
