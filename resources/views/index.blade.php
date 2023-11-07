@@ -21,7 +21,7 @@
                 </button>
             @else
                 @foreach($contacts as $contact)
-                    <div>
+                    <div style="background-color: whitesmoke">
                         <p>Nome: {{ $contact->name }}, Email: {{ $contact->email }}</p> 
                         <form action="/delete-contact/{{ $contact->id }}" method="POST" style="display: inline-block;">
                             @csrf
