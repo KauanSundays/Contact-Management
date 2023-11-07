@@ -14,11 +14,8 @@
     <div class="container center-content mt-4">
         <div class="container-box text-center">
             @if($contacts->isEmpty())
-                <p>Nenhum CONTACTSncontrado.</p>
+                <p>Contacts List is Empty.</p>
                 <br>
-                <button onclick="window.location.href='/'" class="btn btn-warning">
-                    Cadastrar novos CONTACTS
-                </button>
             @else
                 @foreach($contacts as $contact)
                     <div style="background-color: whitesmoke">
@@ -34,11 +31,11 @@
                         </form>
                     </div>
                 @endforeach
-                <button onclick="window.location.href='/create-contact'" class="btn btn-warning">
-                    Cadastrar novos CONTACTS
-                </button>
             @endif
         </div>
+        <button onclick="window.location.href='/create-contact'" class="btn btn-warning">
+            Cadastrar novos CONTACTS
+        </button>
     </div>
 </body>
 </html>
