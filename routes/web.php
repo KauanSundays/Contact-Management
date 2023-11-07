@@ -50,7 +50,7 @@ Route::put('/update/{id_contact}', function (Request $informacoes, $id_contact) 
     $contact = Contact::findOrFail($id_contact);
     $contact->name = $informacoes->name_contact;
     $contact->email = $informacoes->email_contact;
-    $contact->number = $informacoes->number_contact;
+    $contact->contact = $informacoes->number_contact;
     $contact->save();
     return redirect('/mostrar-contacts')->with('mensagem', 'Candidato atualizado com sucesso!');
 });
