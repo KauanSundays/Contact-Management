@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Http\Controllers;
+
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
 use Illuminate\Http\Request;
@@ -33,30 +35,34 @@ class ContactsController extends Controller
                 Rule::unique('contacts', 'email'),
             ],
         ]);
-    
+
         try {
             Contact::create([
                 'name' => $request->name,
                 'contact' => $request->contact,
                 'email' => $request->email,
             ]);
-    
+
             return redirect('/')->with('mensagem', 'Create Contact!');
         } catch (\Illuminate\Database\QueryException $e) {
-            // O número de contato já está cadastrado
+            // O número de contato ou email já está cadastrado
             if ($e->errorInfo[1] == 1062) {
-                return back()
-                    ->withInput()
-                    ->withErrors(['contact' => 'O número de contato já está cadastrado.']);
+                if (strpos($e->getMessage(), 'contacts_contact_unique') !== false) {
+                    return back()
+                        ->withInput()
+                        ->withErrors(['contact' => 'O número de contato já está cadastrado.']);
+                } elseif (strpos($e->getMessage(), 'contacts_email_unique') !== false) {
+                    return back()
+                        ->withInput()
+                        ->withErrors(['email' => 'O email já está cadastrado.']);
+                }
             }
-    
+
             return back()
                 ->withInput()
                 ->withErrors(['error' => 'Ocorreu um erro durante a criação do contato.']);
         }
     }
-    
-
 
     public function destroy($id_contact)
     {
