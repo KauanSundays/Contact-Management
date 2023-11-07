@@ -1,6 +1,6 @@
 <?php
 namespace App\Http\Controllers;
-
+use App\Http\Controllers\Controller;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -10,7 +10,6 @@ class ContactsController extends Controller
     public function index()
     {
         $contacts = Contact::all();
-
         return view('index', ['contacts' => $contacts]);
     }
 
@@ -26,12 +25,12 @@ class ContactsController extends Controller
             'contact' => [
                 'required',
                 'max:9',
-                Rule::unique('contacts', 'contact'), // Verifica se o número de contato é único
+                Rule::unique('contacts', 'contact'),
             ],
             'email' => [
                 'required',
                 'email',
-                Rule::unique('contacts', 'email'), // Verifica se o email é único
+                Rule::unique('contacts', 'email'),
             ],
         ]);
 
@@ -43,4 +42,19 @@ class ContactsController extends Controller
 
         return redirect('/')->with('mensagem', 'Create Contact!');
     }
+
+    public function destroy($id_contact)
+    {
+        $contact = Contact::findOrFail($id_contact);
+        $contact->delete();
+        return redirect('/')->with('mensagem', 'Contact Delete Success!');
+    }
+
+    public function edit($id_contact)
+    {
+        $contact = Contact::findOrFail($id_contact);
+        return view('edit', ['contact' => $contact]);
+    }
+
+    // Outros métodos do seu controller, como atualizar, conforme necessário
 }
