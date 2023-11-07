@@ -37,3 +37,7 @@ p {
 form {
     margin-left: 10px;
 }
+
+form button {
+    margin-left: 10px; /* Isso cria um espaço entre os botões */
+}
