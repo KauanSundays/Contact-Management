@@ -17,14 +17,14 @@
             @csrf
             @method("PUT")
             <div class="text-left">
-                <label for="">Nome:</label>
-                <input type="text" placeholder="name_contact" name="nome_contact" value="{{ }}">
+                <label for="name_contact">Nome:</label>
+                <input type="text" placeholder="name_contact" name="name_contact" value="{{ $contact->name }}">
             </div>
             <br>
             <div class="text-left">
-                <label for="">email:</label>
-                <input type="text" placeholder="email_contact" name="email_contact" value="{{$contact->email}}">
-            </div>
+                <label for="email_contact">Email:</label>
+                <input type="text" placeholder="email_contact" name="email_contact" value="{{ $contact->email }}">
+            </div>            
             <br>
             <div class="text-left">
                 <button class="btn btn-success">Enviar Cadastro</button>

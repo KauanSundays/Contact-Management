@@ -41,7 +41,7 @@ Route::delete('/delete-contact/{id_contact}', function ($id_contact) {
     return redirect('/')->with('mensagem', 'Contact Delete Sucess!');
 });
 
-Route::get('/edit-contact/{$id_contact}', function ($id_contact) {
+Route::get('/edit-contact/{id_contact}', function ($id_contact) {
     $contact = Contact::findOrFail($id_contact);
-    return view('edit', ['contact'=>$contact]);
+    return view('edit', ['contact' => $contact]);
 });
