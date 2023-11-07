@@ -10,17 +10,18 @@
 </head>
 <body style="background: chocolate">
     <div class="container-box text-center">
-        <form action="/create" method="POST">
+        <form action="/create" method="POST" onsubmit="return validateForm()">
             @csrf
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" placeholder="Enter the name" class="form-control" name="name" id="name">
+                <input type="text" placeholder="Enter the name" class="form-control" name="name" id="name" required>
+                <div id="name-error" style="color: red;"></div>
             </div>
 
             <div class="form-group">
                 <label for="contact">Contact:</label>
-                <input type="text" placeholder="9-9999-9999" class="form-control" name="contact" id="contact" maxlength="9">
-            </div>            
+                <input type="text" placeholder="9-9999-9999" class="form-control" name="contact" id="contact">
+            </div>
 
             <div class="form-group">
                 <label for="email">Email Address:</label>
@@ -28,11 +29,26 @@
             </div>
 
             <button type="submit" class="btn btn-success">Send</button>
-        </form>    
+        </form>
     </div>
 
     <button onclick="window.location.href='/'" class="btn btn-warning">
         Read ALL Contacts
     </button>
+
+    <script>
+        function validateForm() {
+            var nameInput = document.getElementById("name");
+            var nameError = document.getElementById("name-error");
+
+            if (nameInput.value.length < 5) {
+                nameError.innerHTML = "O nome deve ter no mínimo 5 caracteres.";
+                return false; // Impede o envio do formulário
+            } else {
+                nameError.innerHTML = ""; // Limpa a mensagem de erro
+                return true; // Permite o envio do formulário
+            }
+        }
+    </script>
 </body>
 </html>
