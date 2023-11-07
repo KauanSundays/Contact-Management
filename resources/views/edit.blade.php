@@ -28,7 +28,7 @@
             <br>
             <div class="text-left">
                 <label for="email_contact">Contact:</label>
-                <input type="text" placeholder="Contact_Number" name="contact" value="{{ $contact->email }}">
+                <input type="text" placeholder="Contact_Number" name="contact" value="{{ $contact->contact }}">
             </div>
             <br>
             <div class="text-left">
