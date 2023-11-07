@@ -34,7 +34,7 @@
             <br>
             <div class="text-left">
                 <button class="btn btn-success">Enviar Cadastro</button>
-                <a href="/" class="btn btn-primary">Retornar à Lista de Contatos</a>
+                <a href="/" class="btn btn-primary">Return Contacts List</a>
             </div>
         </form>
     </div>

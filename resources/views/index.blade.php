@@ -10,7 +10,7 @@
     <title>CRUD</title>
 </head>
 <body class="d-flex flex-column align-items-center justify-content-center vh-100" style="background-color: chocolate">
-    <h1 class="mb-4">Lista de CONTACTS</h1>
+    <h1 class="mb-4">CONTACTS LIST</h1>
     <div class="container center-content mt-4">
         <div class="container-box text-center">
             @if($contacts->isEmpty())
