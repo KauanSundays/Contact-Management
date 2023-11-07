@@ -12,9 +12,6 @@
     @if($contacts->isEmpty())
         <p>Contact List is Empty.</p>
         <br>
-        <button onclick="window.location.href='/'" class="btn btn-warning">
-            Create New Contacts
-        </button>
     @else
         @foreach($contacts as $contact)
             <div>
@@ -29,15 +26,13 @@
                     <form action="/edit-contacts/{{ $contact->id }}" method="GET">
                         <button type="submit" class="btn btn-warning" onclick="mostrarFormEditar()">Editar</button>
                     </form>
-                </p>
-                
-                
+                </p>   
             </div>
         @endforeach
     @endif
 
-    <button>
-        <a href="/create-contact">Create new contact</a>
+    <button onclick="window.location.href='/create-contact'" class="btn btn-warning">
+        Create New Contacts
     </button>
 </body>
 </html>
