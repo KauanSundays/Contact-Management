@@ -15,8 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    $contacts = Contact::all();
+    
+    return view('index', ['contacts' => $contacts]);
+});
+
+Route::get('/create-contact', function () {
+    return view('create');
 });
 
 Route::post('/create', function(Request $informacoes) {
@@ -27,4 +34,3 @@ Route::post('/create', function(Request $informacoes) {
     ]);
     echo "foi";
 });
-
